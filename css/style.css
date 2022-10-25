@@ -157,10 +157,16 @@ button {
     justify-content: center;
     background: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transition: fill var(--cubic) var(--transition-timing);
 }
 
-.model-tap:hover>svg,
-.model-tap:focus>svg {
+
+.tap-modal-close{
+    fill: #000000;
+    transition: fill var(--transition-timing) var(--cubic);
+}
+.model-tap:hover>.tap-modal-close{
     fill: #2196F3;
 }
 
@@ -189,6 +195,7 @@ button {
     /* margin-bottom: 28px; */
     padding-left: 42px;
     outline: transparent;
+    transition: var(--transition-timing) var(--cubic);
 }
 
 .modal-input:focus {
@@ -208,6 +215,7 @@ button {
     top: 50%;
     transform: translateY(-50%);
     left: 12px;
+    transition: var(--transition-timing) var(--cubic);
 }
 
 .modal-input-icon:focus {}
@@ -240,6 +248,7 @@ button {
     resize: none;
     padding: 12px 16px;
     outline: transparent;
+    transition: var(--transition-timing) var(--cubic);
 }
 
 .modal-comment:focus {
@@ -257,24 +266,29 @@ button {
     color: rgba(117, 117, 117, 0.5);
 }
 
+.input-check {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .check-text {
-    /* font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-
-    letter-spacing: 0.03em;
-
-    color: #757575;
-
-    margin-left: 12px; */
-
     display: flex;
     align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 
     margin-bottom: 30px;
-
 }
 
 .modal-field-comment {
@@ -300,18 +314,31 @@ button {
 }
 
 .privacy-link {
+    font-size: 14px;
     line-height: 1.71;
-    text-decoration-line: underline;
+    margin-left: 5px;
+    letter-spacing: 0.03em;
     color: var(--main-order-service);
+    text-underline-offset: 0.25em;
+    text-decoration: underline;
 }
 
 .check-text::before {
-    content: "";
+    display: inline-block;
+    content: " ";
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
     border-radius: 2px;
     margin-right: 9px;
+    transition: var(--transition-timing) var(--cubic);
+}
+
+.input-check:focus+.check-text::before,
+.input-check:hover+.check-text::before {
+    border-color: #188ce8;
+    box-shadow: 0px 1px 1px rgba(143, 64, 12, 0.15);
+    border-radius: 2px;
 }
 
 .input-check:checked+.check-text::before {
@@ -325,7 +352,6 @@ button {
 .modal-btn-container {
     display: flex;
     justify-content: center;
-    /* margin-top: 30px; */
 }
 
 .modal-btn {
@@ -346,13 +372,19 @@ button {
     letter-spacing: 0.06em;
 
     color: #FFFFFF;
+    background: var(--main-order-service);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-timing) var(--cubic);
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
     background: #188CE8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
 }
 
-
-/* < !--------header-------- !> */
+/* < !-------------------------------------------header--------------------------------------- !> */
 
 
 .main-nav {
