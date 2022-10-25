@@ -139,6 +139,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
+    padding: 40px;
 }
 
 .model-tap {
@@ -158,9 +159,197 @@ button {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.model-tap:hover>svg,
+.model-tap:focus>svg {
+    fill: #2196F3;
+}
+
 .modal-close {}
 
 .modal-close-tap {}
+
+.modal-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+
+    color: var(--main-subtitle-color);
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    /* margin-bottom: 28px; */
+    padding-left: 42px;
+    outline: transparent;
+}
+
+.modal-input:focus {
+    border: 1px solid #2196F3;
+}
+
+.modal-input:focus+.modal-input-icon {
+    fill: var(--main-order-service);
+}
+
+.input-wrap {
+    position: relative;
+}
+
+.modal-input-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+}
+
+.modal-input-icon:focus {}
+
+.modal-lable-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.01em;
+
+    color: #757575;
+}
+
+
+
+.modal-field {
+    margin-bottom: 10px;
+}
+
+.modal-comment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    padding: 12px 16px;
+    outline: transparent;
+}
+
+.modal-comment:focus {
+    border: 1px solid #2196F3;
+}
+
+.modal-comment::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.check-text {
+    /* font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    letter-spacing: 0.03em;
+
+    color: #757575;
+
+    margin-left: 12px; */
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+.modal-field-comment {
+    margin-bottom: 20px;
+}
+
+.modal-privacy-link {
+    display: flex;
+    justify-content: center;
+
+}
+
+.privacy-text-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    letter-spacing: 0.03em;
+
+    color: #757575;
+    margin-top: 3px;
+}
+
+.privacy-link {
+    line-height: 1.71;
+    text-decoration-line: underline;
+    color: var(--main-order-service);
+}
+
+.check-text::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    margin-right: 9px;
+}
+
+.input-check:checked+.check-text::before {
+    background-color: #2196F3;
+    background-image: url(../images/Vector.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: transparent;
+}
+
+.modal-btn-container {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 30px; */
+}
+
+.modal-btn {
+    justify-content: center;
+
+    width: 200px;
+    height: 50px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #FFFFFF;
+    background: #188CE8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
 
 
 /* < !--------header-------- !> */
@@ -740,7 +929,7 @@ button {
     padding: 6px 22px;
     border: none;
 
-    transition: color var(--cubic) var(--transition-timing), background var(--cubic) var(--transition-timing),box-shadow var(--cubic) var(--transition-timing);
+    transition: color var(--cubic) var(--transition-timing), background var(--cubic) var(--transition-timing), box-shadow var(--cubic) var(--transition-timing);
 }
 
 .navi-btn:hover,
@@ -801,7 +990,7 @@ button {
 
 .portfolio-link {
     display: block;
-    transition:box-shadow var(--cubic) var(--transition-timing);
+    transition: box-shadow var(--cubic) var(--transition-timing);
 }
 
 
