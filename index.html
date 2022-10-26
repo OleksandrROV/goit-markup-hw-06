@@ -368,6 +368,7 @@
           </ul>
         </address>
       </div>
+      <!-------------------------------Соціальні мережі--------------------------->
       <div class="footer-container-icon">
         <p class="footer-title-icon">приєднуйтесь</p>
         <ul class="footer-list-icon">
@@ -401,12 +402,31 @@
           </li>
         </ul>
       </div>
+      <!------------------------------------ПІДПИШІТЬСЯ НА РОЗСИЛКУ--------------------------------------->
+      <div class="footer-news-email">
+        <h2 class="news-title">Підпишіться на розсилку</h2>
+        <form action="news-form">
+          <lable class="news-lable">
+            <form action="email"></form>
+          </lable>
+          <input class="footer-input-news" type="text" name="email" type="email" id="email" required
+            placeholder="E-mail">
+          <button class="footer-btn-news">
+            <span class="text-sign">Підписатися</span>
+            <svg class="footer-icon-news" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
     </div>
   </footer>
+  <!----------------------------------------------------------Модельне вікно--------------------------------------------->
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <button class="model-tap" data-modal-close>
-        <svg class="tap-modal-close" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="tap-modal-close" width="11" height="11" viewBox="0 0 11 11" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
           <use href="./images/symbol-defs.svg#icon-close"></use>
         </svg>
       </button>
@@ -439,7 +459,6 @@
             </svg>
           </div>
         </div>
-
         <div class="modal-field-comment">
           <label for="user-text" class="modal-lable-text">Коментар</label>
           <textarea name="user-text" id="user-text" class="modal-comment" placeholder="Введіть текст"></textarea>
